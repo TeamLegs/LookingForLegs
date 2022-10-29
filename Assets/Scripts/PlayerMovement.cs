@@ -56,7 +56,10 @@ public class PlayerMovement : MonoBehaviour
     //If the object is colliding with the ground or obstacle, then set isGrounded to true
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        isGrounded = true;
+        if (collision.gameObject.tag == "Ground")
+        {
+            isGrounded = true;
+        }
     }
 
     //If the object is colliding with the ground or obstacle, then set isGrounded to false
