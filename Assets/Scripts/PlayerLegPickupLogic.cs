@@ -6,6 +6,10 @@ using UnityEngine;
 
 public class PlayerLegPickupLogic : MonoBehaviour
 {
+
+    [SerializeField] private List<GameObject> legInventory;
+    [SerializeField] private int selectedLeg;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +19,33 @@ public class PlayerLegPickupLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+           cycleToNextLeg(); 
+        }
+    }
+
+    public bool hasLegs()
+    {
+        return legInventory.Count > 0;
+    }
+
+    public void cycleToNextLeg()
+    {
+        // get ref to old leg
+        GameObject oldLeg = legInventory[selectedLeg];
+        oldLeg.SetActive(false);
         
+        // increment leg index
+        selectedLeg++;
+        if (selectedLeg >= legInventory.Count)
+        {
+            selectedLeg = 0;
+        }
+
+        // get ref to new leg
+        GameObject newLeg = legInventory[selectedLeg];
+        newLeg.SetActive(true);
     }
 
     private void OnCollisionEnter2D(Collision2D col)
@@ -23,17 +53,23 @@ public class PlayerLegPickupLogic : MonoBehaviour
         GameObject legs = col.gameObject;
         if (legs.CompareTag("LegParent"))
         {
-            transform.position += Vector3.up;
-            legs.transform.parent = transform.GetChild(0);
-            legs.transform.localPosition = Vector3.zero;
+            if (!hasLegs() || (hasLegs() && !legs.Equals(legInventory[^1])))
+            {
+                legInventory.Add(legs);
+                legs.transform.parent = transform.GetChild(0);
+                legs.transform.localPosition = Vector3.zero;
+                PlayerMovement movescript = GetComponent<PlayerMovement>();
+                LegValues legvals = legs.GetComponent<LegValues>();
+                movescript.setSpeedMultiplier(legvals.getSpeedMultiplier());
+                movescript.setJumpMultiplier(legvals.getJumpMultiplier());
+            }
+            if (!hasLegs())
+            {
+                transform.position += Vector3.up;
+                GetComponent<BoxCollider2D>().size = new Vector2(1, 2);  
+                GetComponent<BoxCollider2D>().offset = new Vector2(0, -0.5f);  
+            }
 
-            GetComponent<BoxCollider2D>().size = new Vector2(1, 2);  
-            GetComponent<BoxCollider2D>().offset = new Vector2(0, -0.5f);  
-
-            PlayerMovement movescript = GetComponent<PlayerMovement>();
-            LegValues legvals = legs.GetComponent<LegValues>();
-            movescript.setSpeedMultiplier(legvals.getSpeedMultiplier());
-            movescript.setJumpMultiplier(legvals.getJumpMultiplier());
         }
     }
 }
