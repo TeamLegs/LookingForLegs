@@ -8,6 +8,9 @@ public class PlayerMovement : MonoBehaviour
     //Delcare Variables
     [SerializeField] private float jumpSpeed = 5f; //Variable can be changed in the editor
     [SerializeField] private float speed = 5f;
+
+    [SerializeField] float speedMultiplier = 1;
+    [SerializeField] float jumpMultiplier = 1;
     
     Rigidbody2D rb;
 
@@ -40,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
 
         //When a horizontal input is given then the player will move along the x axis. 
         Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0f, 0f);
-        transform.position += move * Time.deltaTime * speed;
+        transform.position += move * Time.deltaTime * speed * speedMultiplier;
     }
 
     public void Jump()
@@ -48,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
         //If the object is grounded and the player presses space, then jump.
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded == (true))
         {
-            rb.AddForce(new Vector2(0f, jumpSpeed), ForceMode2D.Impulse);
+            rb.AddForce(new Vector2(0f, jumpSpeed * jumpMultiplier), ForceMode2D.Impulse);
         }
         
     }
@@ -65,6 +68,21 @@ public class PlayerMovement : MonoBehaviour
     //If the object is colliding with the ground or obstacle, then set isGrounded to false
     public void OnCollisionExit2D(Collision2D collision)
     {
-        isGrounded = false;
+        if (collision.gameObject.tag == "Ground")
+        {
+            isGrounded = false;
+        }
     }
+
+    public void setSpeedMultiplier(float multiplier)
+    {
+        speedMultiplier = multiplier;
+    }
+
+    public void setJumpMultiplier(float multiplier)
+    {
+        jumpMultiplier = multiplier;
+    }
+
+
 }

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7657606488363074505}
   - component: {fileID: 4255368169794233080}
   - component: {fileID: 6063499726513593569}
+  - component: {fileID: -4767863334100117165}
   m_Layer: 0
   m_Name: LegParent
   m_TagString: LegParent
@@ -111,3 +112,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &-4767863334100117165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5177921502570135790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34647bb712c04944aa9564b1bfbef36a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedMultiplier: 3
+  jumpMultiplier: 2
