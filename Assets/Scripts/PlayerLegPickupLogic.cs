@@ -23,6 +23,7 @@ public class PlayerLegPickupLogic : MonoBehaviour
         GameObject legs = col.gameObject;
         if (legs.CompareTag("LegParent"))
         {
+            transform.position += Vector3.up;
             legs.transform.parent = transform.GetChild(0);
             legs.transform.localPosition = Vector3.zero;
         }
