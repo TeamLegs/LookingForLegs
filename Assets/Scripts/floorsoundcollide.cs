@@ -9,7 +9,7 @@ public class floorsoundcollide : MonoBehaviour
     void Start()
     {
         audioData = GetComponent<AudioSource>();
-        audioData.Play(0);
+       // audioData.Play(0);
         Debug.Log("started");
     }
 
