@@ -27,12 +27,15 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage(int d)
     {
+       
         if (life >= 1)
         {
 
             life -= d; // 1-1 = 0
 
-            health[life].gameObject.GetComponent<HealthBar>().shake(); //[0]
+            
+
+            health[life].gameObject.GetComponent<HealthBar>().damage(); //[0]
 
             if (life < 1)
             {

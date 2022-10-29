@@ -5,12 +5,14 @@ using UnityEngine;
 public class HealthBar : MonoBehaviour
 {
     private float time;
-    private Vector3 startingPos;
+    [SerializeField]private Vector3 startingPos;
     private bool shaking;
     ParticleSystem particles;
+    [SerializeField] Sprite empty;
     // Start is called before the first frame update
     void Start()
     {
+        startingPos = gameObject.transform.localPosition;
         shaking = false;
         particles = GetComponent<ParticleSystem>();
         particles.Pause();
@@ -21,21 +23,23 @@ public class HealthBar : MonoBehaviour
     {
         if (shaking)
         {
+            
             time += Time.deltaTime;
-           
+            
             gameObject.transform.position += new Vector3(Random.RandomRange(-0.05f, 0.05f), Random.RandomRange(-0.05f, 0.05f), Random.RandomRange(-0.05f, 0.05f));
             if (time >= 0.2) {
                 shaking = false;
-                gameObject.transform.position = startingPos;
+                gameObject.transform.localPosition = startingPos;
             }
         }
 
     }
 
-    public void shake()
+    public void damage()
     {
         shaking = true;
-        startingPos = gameObject.transform.position;
         particles.Play();
+        GetComponent<UnityEngine.UI.Image>().sprite = empty;
+        //startingPos = gameObject.transform.position;
     }
 }
