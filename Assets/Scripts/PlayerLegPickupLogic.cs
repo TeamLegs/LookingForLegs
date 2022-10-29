@@ -26,6 +26,14 @@ public class PlayerLegPickupLogic : MonoBehaviour
             transform.position += Vector3.up;
             legs.transform.parent = transform.GetChild(0);
             legs.transform.localPosition = Vector3.zero;
+
+            GetComponent<BoxCollider2D>().size = new Vector2(1, 2);  
+            GetComponent<BoxCollider2D>().offset = new Vector2(0, -0.5f);  
+
+            PlayerMovement movescript = GetComponent<PlayerMovement>();
+            LegValues legvals = legs.GetComponent<LegValues>();
+            movescript.setSpeedMultiplier(legvals.getSpeedMultiplier());
+            movescript.setJumpMultiplier(legvals.getJumpMultiplier());
         }
     }
 }
