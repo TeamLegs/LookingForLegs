@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -207,6 +208,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 757ae873ac100e447bcaf94de2191121, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 881026970}
+  offset: {x: 8, y: 2, z: -10}
+--- !u!4 &881026970 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5949554816469732146, guid: 1f7e6b3d39be9934397d3c39a6b191af, type: 3}
+  m_PrefabInstance: {fileID: 5949554816679668904}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5949554816679668904
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -215,17 +235,21 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5949554816469732144, guid: 1f7e6b3d39be9934397d3c39a6b191af, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5949554816469732146, guid: 1f7e6b3d39be9934397d3c39a6b191af, type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5949554816469732146, guid: 1f7e6b3d39be9934397d3c39a6b191af, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.6996
+      value: -13.31
       objectReference: {fileID: 0}
     - target: {fileID: 5949554816469732146, guid: 1f7e6b3d39be9934397d3c39a6b191af, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.2596
+      value: -1.49
       objectReference: {fileID: 0}
     - target: {fileID: 5949554816469732146, guid: 1f7e6b3d39be9934397d3c39a6b191af, type: 3}
       propertyPath: m_LocalPosition.z
