@@ -32,7 +32,7 @@ public class PlayerHealth : MonoBehaviour
 
             life -= d; // 1-1 = 0
 
-            Destroy(health[life].gameObject); //[0]
+            health[life].gameObject.GetComponent<HealthBar>().shake(); //[0]
 
             if (life < 1)
             {

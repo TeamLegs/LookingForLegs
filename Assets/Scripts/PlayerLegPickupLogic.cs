@@ -30,6 +30,25 @@ public class PlayerLegPickupLogic : MonoBehaviour
         return legInventory.Count > 0;
     }
 
+    public void cycleToSpecificLeg(int index)
+    {
+        // get ref to old leg
+        GameObject oldLeg = legInventory[selectedLeg];
+        oldLeg.SetActive(false);
+
+        selectedLeg = index;
+        
+        // get ref to new leg
+        GameObject newLeg = legInventory[selectedLeg];
+        newLeg.SetActive(true);       
+        
+        PlayerMovement movescript = GetComponent<PlayerMovement>();
+        LegValues legvals = newLeg.GetComponent<LegValues>();
+        movescript.setSpeedMultiplier(legvals.getSpeedMultiplier());
+        movescript.setJumpMultiplier(legvals.getJumpMultiplier());
+                
+    }
+
     public void cycleToNextLeg()
     {
         // get ref to old leg
@@ -46,6 +65,12 @@ public class PlayerLegPickupLogic : MonoBehaviour
         // get ref to new leg
         GameObject newLeg = legInventory[selectedLeg];
         newLeg.SetActive(true);
+        
+        PlayerMovement movescript = GetComponent<PlayerMovement>();
+        LegValues legvals = newLeg.GetComponent<LegValues>();
+        movescript.setSpeedMultiplier(legvals.getSpeedMultiplier());
+        movescript.setJumpMultiplier(legvals.getJumpMultiplier());
+                
     }
 
     private void OnCollisionEnter2D(Collision2D col)
@@ -56,12 +81,15 @@ public class PlayerLegPickupLogic : MonoBehaviour
             if (!hasLegs() || (hasLegs() && !legs.Equals(legInventory[^1])))
             {
                 legInventory.Add(legs);
+                cycleToSpecificLeg(legInventory.Count-1);
                 legs.transform.parent = transform.GetChild(0);
                 legs.transform.localPosition = Vector3.zero;
+                
                 PlayerMovement movescript = GetComponent<PlayerMovement>();
                 LegValues legvals = legs.GetComponent<LegValues>();
                 movescript.setSpeedMultiplier(legvals.getSpeedMultiplier());
                 movescript.setJumpMultiplier(legvals.getJumpMultiplier());
+                
             }
             if (!hasLegs())
             {
