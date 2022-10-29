@@ -58,11 +58,18 @@ public class PlayerLegPickupLogic : MonoBehaviour
                 legInventory.Add(legs);
                 legs.transform.parent = transform.GetChild(0);
                 legs.transform.localPosition = Vector3.zero;
+                PlayerMovement movescript = GetComponent<PlayerMovement>();
+                LegValues legvals = legs.GetComponent<LegValues>();
+                movescript.setSpeedMultiplier(legvals.getSpeedMultiplier());
+                movescript.setJumpMultiplier(legvals.getJumpMultiplier());
             }
             if (!hasLegs())
             {
                 transform.position += Vector3.up;
+                GetComponent<BoxCollider2D>().size = new Vector2(1, 2);  
+                GetComponent<BoxCollider2D>().offset = new Vector2(0, -0.5f);  
             }
+
         }
     }
 }

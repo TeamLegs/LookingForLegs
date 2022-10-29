@@ -19,12 +19,12 @@ public class LegValues : MonoBehaviour
         
     }
 
-    float getSpeedMultiplier()
+    public float getSpeedMultiplier()
     {
         return speedMultiplier;
     }
 
-    float getJumpMultiplier()
+    public float getJumpMultiplier()
     {
         return jumpMultiplier;
     }
