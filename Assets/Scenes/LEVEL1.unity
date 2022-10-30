@@ -469,15 +469,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7657606488363074505, guid: 4c6315a37c04861408bac42aef5929d1, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7657606488363074505, guid: 4c6315a37c04861408bac42aef5929d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 375.14
+      value: 510.6
       objectReference: {fileID: 0}
     - target: {fileID: 7657606488363074505, guid: 4c6315a37c04861408bac42aef5929d1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.1
+      value: 64.3
       objectReference: {fileID: 0}
     - target: {fileID: 7657606488363074505, guid: 4c6315a37c04861408bac42aef5929d1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5224,15 +5224,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7657606488363074505, guid: e46000a95a883364e946bd1bfd4031d9, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7657606488363074505, guid: e46000a95a883364e946bd1bfd4031d9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 373.3913
+      value: 508.8513
       objectReference: {fileID: 0}
     - target: {fileID: 7657606488363074505, guid: e46000a95a883364e946bd1bfd4031d9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.966246
+      value: 64.16625
       objectReference: {fileID: 0}
     - target: {fileID: 7657606488363074505, guid: e46000a95a883364e946bd1bfd4031d9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6758,7 +6758,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.28, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &506816292
 SpriteRenderer:
@@ -6798,8 +6798,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1411169997
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6002ef8e7c10fe04abd8066d7da4b346, type: 3}
   m_Color: {r: 0.745283, g: 0.42346957, b: 0.1511659, a: 1}
@@ -7392,7 +7392,7 @@ Transform:
   m_Children:
   - {fileID: 1639214169}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &533293027
 AudioSource:
@@ -9193,11 +9193,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5949554816469732146, guid: b1b66a30324323d45816e492c6ac1569, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 371.4
+      value: 506.46
       objectReference: {fileID: 0}
     - target: {fileID: 5949554816469732146, guid: b1b66a30324323d45816e492c6ac1569, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.95
+      value: 65.35
       objectReference: {fileID: 0}
     - target: {fileID: 5949554816469732146, guid: b1b66a30324323d45816e492c6ac1569, type: 3}
       propertyPath: m_LocalPosition.z
@@ -17560,10 +17560,6 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 0.64
       objectReference: {fileID: 0}
-    - target: {fileID: 887989052297254757, guid: ae6bb7b76b89e2e4eafb808a8d8bbfad, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 14e5f6cdbb9fc7f4ba1b3332c1212623, type: 3}
     - target: {fileID: 6439558929260599139, guid: ae6bb7b76b89e2e4eafb808a8d8bbfad, type: 3}
       propertyPath: m_Name
       value: SwingingBlades (2)
@@ -17627,119 +17623,6 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: ae6bb7b76b89e2e4eafb808a8d8bbfad, type: 3}
---- !u!1 &1103514701 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6439558929260599139, guid: ae6bb7b76b89e2e4eafb808a8d8bbfad, type: 3}
-  m_PrefabInstance: {fileID: 1103514700}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1103514702
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1103514701}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cbe96654ef2ede14ba952f6c57c3b881, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!82 &1103514703
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1103514701}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 9f7fe4bd050ded54eacb12fca2d3e4c5, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1001 &1104260470
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30287,7 +30170,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.28, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &1746860688
 SpriteRenderer:
@@ -30327,8 +30210,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1411169997
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6002ef8e7c10fe04abd8066d7da4b346, type: 3}
   m_Color: {r: 0.745283, g: 0.42346957, b: 0.1511659, a: 1}
@@ -30462,7 +30345,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.28, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &1768012499
 SpriteRenderer:
@@ -30502,8 +30385,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1411169997
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6002ef8e7c10fe04abd8066d7da4b346, type: 3}
   m_Color: {r: 0.745283, g: 0.42346957, b: 0.1511659, a: 1}
@@ -33331,7 +33214,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.28, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &1983183884
 SpriteRenderer:
@@ -33371,8 +33254,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1411169997
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6002ef8e7c10fe04abd8066d7da4b346, type: 3}
   m_Color: {r: 0.745283, g: 0.42346957, b: 0.1511659, a: 1}
@@ -33442,7 +33325,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.28, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &1984732123
 SpriteRenderer:
@@ -33482,8 +33365,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1411169997
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6002ef8e7c10fe04abd8066d7da4b346, type: 3}
   m_Color: {r: 0.745283, g: 0.42346957, b: 0.1511659, a: 1}
