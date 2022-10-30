@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - LegParent
+  - Ground
   layers:
   - Default
   - TransparentFX
@@ -48,6 +49,12 @@ TagManager:
   - name: Bkg_Forest
     uniqueID: 3085302489
     locked: 0
+  - name: Bkg_Fence
+    uniqueID: 1705307233
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Bkg_Foreground
+    uniqueID: 1913429171
     locked: 0
