@@ -18,13 +18,10 @@ public class PlayerMovement : MonoBehaviour
     public float timeSinceAction = 0.0f;
     public float actionCooldown = 0.0f;
 
-    private SpriteRenderer sprite;
-
     // Awake is called when the script is being loaded
     public void Awake()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
-        sprite = GetComponent<SpriteRenderer>();
     }
 
     // Start is called before the first frame update
@@ -58,6 +55,11 @@ public class PlayerMovement : MonoBehaviour
             isGrounded = false;
         }
         
+    }
+
+    public bool isMoving()
+    {
+        return Input.GetAxis("Horizontal") != 0f;
     }
 
     //If the object is colliding with the ground or obstacle, then set isGrounded to true
