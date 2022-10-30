@@ -1,21 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
     //Declare Variables
+    public Animator animator;
 
+    private int levelToLoad;
 
-    public void PlayGame()
+    void Update()
     {
-        SceneManager.LoadScene(1);
+        
     }
 
-    public void ExitGame()
+    public void StartGame()
     {
-        Application.Quit();
-        Debug.Log("QUIT!!!");
+        FadeToLevel(1);
+    }
+
+    public void FadeToLevel(int levelIndex)
+    {
+        levelToLoad = levelIndex;
+        animator.SetTrigger("Start");
+    }
+
+    public void OnFadeComplete()
+    {
+        SceneManager.LoadScene(levelToLoad);
+
     }
 }
