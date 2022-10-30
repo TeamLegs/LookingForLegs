@@ -24,7 +24,7 @@ public class MainMenu : MonoBehaviour
     public void EndGame()
     {
         Application.Quit();
-        //Debug.Log("You Quit. That was stupid.");
+        Debug.Log("You Quit. That was stupid.");
     }
 
     public void FadeToLevel(int levelIndex)
