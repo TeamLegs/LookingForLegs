@@ -8,27 +8,31 @@ public class LevelManager : MonoBehaviour
 {
     //Declare Variables
     public Animator animator;
+    public FinishTrigger fT;
+
+    public bool animTriggered = false;
 
     private int levelToLoad;
+
+    void Start()
+    {
+        levelToLoad = SceneManager.GetActiveScene().buildIndex + 1;
+        Debug.Log(levelToLoad);
+    }
 
     void Update()
     {
 
     }
 
-    public void OnTriggerEnter2D(Collider2D collision)
+    public void FadeToLevel()
     {
-        if (collision.gameObject.tag == "Player")
-        {
-            
-        }
+        levelToLoad = SceneManager.GetActiveScene().buildIndex + 1;
+        Debug.Log(levelToLoad);
     }
 
-
-
     public void LevelFadeComplete()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-
+    {        
+        SceneManager.LoadScene(levelToLoad);
     }
 }
