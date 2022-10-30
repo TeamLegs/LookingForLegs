@@ -47,5 +47,18 @@ public class Animation : MonoBehaviour
                 counter = 0;
             }
         }
+        else
+        {
+            if (pm.isMoving() && counter >= 1f/animSpeed)
+            {
+                currentAnimIndex++;
+                if (currentAnimIndex >= noLegsFrames.Count)
+                {
+                    currentAnimIndex = 0;
+                }
+                spriteRenderer.sprite = upperBodyWLegs[currentAnimIndex];
+                counter = 0;
+            }
+        }
     }
 }
