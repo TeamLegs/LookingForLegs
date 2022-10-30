@@ -20,7 +20,9 @@ public class floorsoundcollide : MonoBehaviour
      void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
+        {
             audioData = GetComponent<AudioSource>();
+        }
         audioData.Play(0);
             Debug.Log("Stop touching me");
     }

@@ -21,7 +21,7 @@ public class Animation : MonoBehaviour
 
     private float counter;
 
-    private bool legsAcquired = false;
+    [SerializeField] private bool legsAcquired = false;
     
     // Start is called before the first frame update
     void Start()
@@ -70,17 +70,17 @@ public class Animation : MonoBehaviour
                 }
                 spriteRenderer.sprite = upperBodyWLegs[_currentAnimIndex];
 
-                legAnimIndex++;
-                if (legAnimIndex >= legAnim.Count)
+                if (legSprite != null)
                 {
-                    legAnimIndex = 0;
+                    legAnimIndex++;
+                    if (legAnimIndex >= legAnim.Count)
+                    {
+                        legAnimIndex = 0;
+                    }
+                    legSprite.sprite = legAnim[legAnimIndex];
                 }
-
-                legSprite.sprite = legAnim[legAnimIndex];
                 counter = 0;
             }
-            
-            // animate legs
         }
     }
 }
