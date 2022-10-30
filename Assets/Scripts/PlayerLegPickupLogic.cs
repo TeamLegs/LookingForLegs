@@ -9,11 +9,12 @@ public class PlayerLegPickupLogic : MonoBehaviour
 
     [SerializeField] private List<GameObject> legInventory;
     [SerializeField] private int selectedLeg;
-    
+    private Animation animScript;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        animScript = GetComponent<Animation>();
     }
 
     // Update is called once per frame
@@ -46,7 +47,7 @@ public class PlayerLegPickupLogic : MonoBehaviour
         LegValues legvals = newLeg.GetComponent<LegValues>();
         movescript.setSpeedMultiplier(legvals.getSpeedMultiplier());
         movescript.setJumpMultiplier(legvals.getJumpMultiplier());
-                
+        animScript.changeLeg(newLeg.GetComponent<SpriteRenderer>());
     }
 
     public void cycleToNextLeg()
@@ -70,7 +71,7 @@ public class PlayerLegPickupLogic : MonoBehaviour
         LegValues legvals = newLeg.GetComponent<LegValues>();
         movescript.setSpeedMultiplier(legvals.getSpeedMultiplier());
         movescript.setJumpMultiplier(legvals.getJumpMultiplier());
-                
+        animScript.changeLeg(newLeg.GetComponent<SpriteRenderer>());
     }
 
     private void OnCollisionEnter2D(Collision2D col)
@@ -89,7 +90,6 @@ public class PlayerLegPickupLogic : MonoBehaviour
                 LegValues legvals = legs.GetComponent<LegValues>();
                 movescript.setSpeedMultiplier(legvals.getSpeedMultiplier());
                 movescript.setJumpMultiplier(legvals.getJumpMultiplier());
-                
             }
             if (!hasLegs())
             {
