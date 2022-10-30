@@ -13,7 +13,7 @@ public class Animation : MonoBehaviour
     private PlayerMovement pm;
     private SpriteRenderer spriteRenderer;
 
-    private int currentAnimIndex = 0;
+    private int _currentAnimIndex = 0;
 
     private float counter;
     
@@ -38,12 +38,12 @@ public class Animation : MonoBehaviour
             // play legless anim when moving
             if (pm.isMoving() && counter >= 1f/animSpeed)
             {
-                currentAnimIndex++;
-                if (currentAnimIndex >= noLegsFrames.Count)
+                _currentAnimIndex++;
+                if (_currentAnimIndex >= noLegsFrames.Count)
                 {
-                    currentAnimIndex = 0;
+                    _currentAnimIndex = 0;
                 }
-                spriteRenderer.sprite = noLegsFrames[currentAnimIndex];
+                spriteRenderer.sprite = noLegsFrames[_currentAnimIndex];
                 counter = 0;
             }
         }
@@ -51,12 +51,12 @@ public class Animation : MonoBehaviour
         {
             if (pm.isMoving() && counter >= 1f/animSpeed)
             {
-                currentAnimIndex++;
-                if (currentAnimIndex >= noLegsFrames.Count)
+                _currentAnimIndex++;
+                if (_currentAnimIndex >= upperBodyWLegs.Count)
                 {
-                    currentAnimIndex = 0;
+                    _currentAnimIndex = 0;
                 }
-                spriteRenderer.sprite = upperBodyWLegs[currentAnimIndex];
+                spriteRenderer.sprite = upperBodyWLegs[_currentAnimIndex];
                 counter = 0;
             }
         }
