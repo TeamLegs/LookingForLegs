@@ -278,8 +278,18 @@ MonoBehaviour:
   - {fileID: 1213731135, guid: 219df4b1b03ba964388c3cf79f1109bb, type: 3}
   - {fileID: -790840903, guid: 219df4b1b03ba964388c3cf79f1109bb, type: 3}
   - {fileID: 40464942, guid: 219df4b1b03ba964388c3cf79f1109bb, type: 3}
+  legAnim:
+  - {fileID: 1860547221, guid: e3b146da86f8e304c8ec1222e4a5decc, type: 3}
+  - {fileID: -1598017907, guid: e3b146da86f8e304c8ec1222e4a5decc, type: 3}
+  - {fileID: -2090401519, guid: e3b146da86f8e304c8ec1222e4a5decc, type: 3}
+  - {fileID: -635235909, guid: e3b146da86f8e304c8ec1222e4a5decc, type: 3}
+  - {fileID: -1435595527, guid: e3b146da86f8e304c8ec1222e4a5decc, type: 3}
+  - {fileID: 161369596, guid: e3b146da86f8e304c8ec1222e4a5decc, type: 3}
+  - {fileID: -1431347872, guid: e3b146da86f8e304c8ec1222e4a5decc, type: 3}
+  - {fileID: 385794032, guid: e3b146da86f8e304c8ec1222e4a5decc, type: 3}
   hasLegs: 0
   animSpeed: 6
+  legsAcquired: 0
 --- !u!198 &3211477142641855208
 ParticleSystem:
   m_ObjectHideFlags: 0
