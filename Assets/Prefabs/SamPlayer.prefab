@@ -247,6 +247,8 @@ MonoBehaviour:
   - {fileID: 0}
   life: 0
   dead: 0
+  anim: {fileID: 0}
+  levelM: {fileID: 0}
 --- !u!114 &4829692139248510534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -268,6 +270,10 @@ MonoBehaviour:
   - {fileID: -1626708654, guid: 7d54fcd85049cdf4aa6c09b6d2986a06, type: 3}
   - {fileID: -971133031, guid: 7d54fcd85049cdf4aa6c09b6d2986a06, type: 3}
   - {fileID: -555490802, guid: 7d54fcd85049cdf4aa6c09b6d2986a06, type: 3}
-  upperBodyWLegs: []
+  upperBodyWLegs:
+  - {fileID: -1796810767, guid: 219df4b1b03ba964388c3cf79f1109bb, type: 3}
+  - {fileID: 1213731135, guid: 219df4b1b03ba964388c3cf79f1109bb, type: 3}
+  - {fileID: -790840903, guid: 219df4b1b03ba964388c3cf79f1109bb, type: 3}
+  - {fileID: 40464942, guid: 219df4b1b03ba964388c3cf79f1109bb, type: 3}
   hasLegs: 0
   animSpeed: 6
