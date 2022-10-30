@@ -6,6 +6,7 @@ public class Animation : MonoBehaviour
 {
     [SerializeField] private List<Sprite> noLegsFrames;
     [SerializeField] private List<Sprite> upperBodyWLegs;
+    [SerializeField] private List<Sprite> legAnim;
     [SerializeField] private bool hasLegs;
     [SerializeField] private float animSpeed; // in fps
 
@@ -13,9 +14,14 @@ public class Animation : MonoBehaviour
     private PlayerMovement pm;
     private SpriteRenderer spriteRenderer;
 
-    private int currentAnimIndex = 0;
+    private SpriteRenderer legSprite;
+
+    private int _currentAnimIndex = 0;
+    private int legAnimIndex = 0;
 
     private float counter;
+
+    private bool legsAcquired = false;
     
     // Start is called before the first frame update
     void Start()
@@ -23,6 +29,7 @@ public class Animation : MonoBehaviour
         pickupLogic = GetComponent<PlayerLegPickupLogic>();
         pm = GetComponent<PlayerMovement>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+
 
         counter = 0;
     }
@@ -32,18 +39,23 @@ public class Animation : MonoBehaviour
     {
         counter += Time.deltaTime;
         hasLegs = pickupLogic.hasLegs();
-        
+
+        if (!legsAcquired && hasLegs)
+        {
+            legSprite = transform.GetChild(0).GetChild(0).GetComponent<SpriteRenderer>();
+            legsAcquired = true;
+        }
         if (!hasLegs)
         {
             // play legless anim when moving
             if (pm.isMoving() && counter >= 1f/animSpeed)
             {
-                currentAnimIndex++;
-                if (currentAnimIndex >= noLegsFrames.Count)
+                _currentAnimIndex++;
+                if (_currentAnimIndex >= noLegsFrames.Count)
                 {
-                    currentAnimIndex = 0;
+                    _currentAnimIndex = 0;
                 }
-                spriteRenderer.sprite = noLegsFrames[currentAnimIndex];
+                spriteRenderer.sprite = noLegsFrames[_currentAnimIndex];
                 counter = 0;
             }
         }
@@ -51,14 +63,24 @@ public class Animation : MonoBehaviour
         {
             if (pm.isMoving() && counter >= 1f/animSpeed)
             {
-                currentAnimIndex++;
-                if (currentAnimIndex >= noLegsFrames.Count)
+                _currentAnimIndex++;
+                if (_currentAnimIndex >= upperBodyWLegs.Count)
                 {
-                    currentAnimIndex = 0;
+                    _currentAnimIndex = 0;
                 }
-                spriteRenderer.sprite = upperBodyWLegs[currentAnimIndex];
+                spriteRenderer.sprite = upperBodyWLegs[_currentAnimIndex];
+
+                legAnimIndex++;
+                if (legAnimIndex >= legAnim.Count)
+                {
+                    legAnimIndex = 0;
+                }
+
+                legSprite.sprite = legAnim[legAnimIndex];
                 counter = 0;
             }
+            
+            // animate legs
         }
     }
 }
