@@ -40,6 +40,5 @@ public class HealthBar : MonoBehaviour
         shaking = true;
         particles.Play();
         GetComponent<UnityEngine.UI.Image>().sprite = empty;
-        //startingPos = gameObject.transform.position;
     }
 }
