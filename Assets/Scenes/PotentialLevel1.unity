@@ -4753,7 +4753,7 @@ GameObject:
   - component: {fileID: 517367175}
   m_Layer: 0
   m_Name: Safeground (14)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6935,7 +6935,7 @@ GameObject:
   - component: {fileID: 849839575}
   m_Layer: 0
   m_Name: Safeground (10)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7156,7 +7156,7 @@ GameObject:
   - component: {fileID: 883295224}
   m_Layer: 0
   m_Name: Safeground (8)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8876,7 +8876,7 @@ GameObject:
   - component: {fileID: 1160530878}
   m_Layer: 0
   m_Name: Safeground (7)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10898,7 +10898,7 @@ GameObject:
   - component: {fileID: 1441887443}
   m_Layer: 0
   m_Name: Safeground (15)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11314,7 +11314,7 @@ GameObject:
   - component: {fileID: 1515752518}
   m_Layer: 0
   m_Name: Safeground (17)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11773,7 +11773,7 @@ GameObject:
   - component: {fileID: 1604243930}
   m_Layer: 0
   m_Name: Safeground (13)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14245,7 +14245,7 @@ GameObject:
   - component: {fileID: 1879092532}
   m_Layer: 0
   m_Name: Safeground (16)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14517,7 +14517,7 @@ GameObject:
   - component: {fileID: 1930452355}
   m_Layer: 0
   m_Name: Safeground (9)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15043,7 +15043,7 @@ GameObject:
   - component: {fileID: 1946927279}
   m_Layer: 0
   m_Name: Safeground (11)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
