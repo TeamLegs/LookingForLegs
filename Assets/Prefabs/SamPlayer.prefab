@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 281340012190009354}
   - component: {fileID: 1900324269259604816}
   - component: {fileID: 4037486686245464457}
+  - component: {fileID: 7906645097168269747}
   m_Layer: 0
   m_Name: SamPlayer
   m_TagString: Player
@@ -227,3 +228,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.25, y: 1.14}
   m_EdgeRadius: 0
+--- !u!114 &7906645097168269747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5949554816469732158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92610340f87958d40ac66d81fd775fa3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  noLegsFrames:
+  - {fileID: -910338039, guid: 7d54fcd85049cdf4aa6c09b6d2986a06, type: 3}
+  - {fileID: -464346312, guid: 7d54fcd85049cdf4aa6c09b6d2986a06, type: 3}
+  - {fileID: -263047411, guid: 7d54fcd85049cdf4aa6c09b6d2986a06, type: 3}
+  - {fileID: -1037016675, guid: 7d54fcd85049cdf4aa6c09b6d2986a06, type: 3}
+  - {fileID: -470821489, guid: 7d54fcd85049cdf4aa6c09b6d2986a06, type: 3}
+  - {fileID: -1626708654, guid: 7d54fcd85049cdf4aa6c09b6d2986a06, type: 3}
+  - {fileID: -971133031, guid: 7d54fcd85049cdf4aa6c09b6d2986a06, type: 3}
+  - {fileID: -555490802, guid: 7d54fcd85049cdf4aa6c09b6d2986a06, type: 3}
+  upperBodyWLegs: []
+  hasLegs: 0
+  animSpeed: 4
