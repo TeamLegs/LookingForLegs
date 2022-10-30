@@ -6,6 +6,7 @@ public class Animation : MonoBehaviour
 {
     [SerializeField] private List<Sprite> noLegsFrames;
     [SerializeField] private List<Sprite> upperBodyWLegs;
+    [SerializeField] private List<Sprite> legAnim;
     [SerializeField] private bool hasLegs;
     [SerializeField] private float animSpeed; // in fps
 
@@ -13,9 +14,14 @@ public class Animation : MonoBehaviour
     private PlayerMovement pm;
     private SpriteRenderer spriteRenderer;
 
+    private SpriteRenderer legSprite;
+
     private int _currentAnimIndex = 0;
+    private int legAnimIndex = 0;
 
     private float counter;
+
+    private bool legsAcquired = false;
     
     // Start is called before the first frame update
     void Start()
@@ -23,6 +29,7 @@ public class Animation : MonoBehaviour
         pickupLogic = GetComponent<PlayerLegPickupLogic>();
         pm = GetComponent<PlayerMovement>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+
 
         counter = 0;
     }
@@ -32,7 +39,12 @@ public class Animation : MonoBehaviour
     {
         counter += Time.deltaTime;
         hasLegs = pickupLogic.hasLegs();
-        
+
+        if (!legsAcquired && hasLegs)
+        {
+            legSprite = transform.GetChild(0).GetChild(0).GetComponent<SpriteRenderer>();
+            legsAcquired = true;
+        }
         if (!hasLegs)
         {
             // play legless anim when moving
@@ -57,8 +69,18 @@ public class Animation : MonoBehaviour
                     _currentAnimIndex = 0;
                 }
                 spriteRenderer.sprite = upperBodyWLegs[_currentAnimIndex];
+
+                legAnimIndex++;
+                if (legAnimIndex >= legAnim.Count)
+                {
+                    legAnimIndex = 0;
+                }
+
+                legSprite.sprite = legAnim[legAnimIndex];
                 counter = 0;
             }
+            
+            // animate legs
         }
     }
 }
