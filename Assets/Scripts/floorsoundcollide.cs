@@ -24,7 +24,6 @@ public class floorsoundcollide : MonoBehaviour
             audioData = GetComponent<AudioSource>();
         }
         audioData.Play(0);
-            Debug.Log("Stop touching me");
     }
     
 }
