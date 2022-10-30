@@ -12,9 +12,12 @@ EditorBuildSettings:
     path: Assets/Scenes/LoadingScreen.unity
     guid: f6e8bc829ce05ec4f850a11f31495850
   - enabled: 1
+    path: Assets/Scenes/DeathScene.unity
+    guid: d5c71d76eb6ff704fa8c2aa02fcc0160
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/SampleScene 1.unity
-    guid: b2505d6c8422aef498607ee5b95e9016
+    guid: 27373ee8ba6140b46b21ed0b4481d08c
   m_configObjects: {}

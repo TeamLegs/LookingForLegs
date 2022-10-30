@@ -7,10 +7,9 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
     //Declare Variables
-    public Animator animator;
+    public Animator anim;
+    public Animator anim1;
     public FinishTrigger fT;
-
-    public bool animTriggered = false;
 
     private int levelToLoad;
 
@@ -34,5 +33,10 @@ public class LevelManager : MonoBehaviour
     public void LevelFadeComplete()
     {        
         SceneManager.LoadScene(levelToLoad);
+    }
+
+    public void LevelFailed()
+    {
+        SceneManager.LoadScene(2);
     }
 }
