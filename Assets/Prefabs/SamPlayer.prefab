@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 281340012190009354}
   - component: {fileID: 1900324269259604816}
   - component: {fileID: 4037486686245464457}
+  - component: {fileID: 3827579110629406552}
   m_Layer: 0
   m_Name: SamPlayer
   m_TagString: Player
@@ -227,3 +228,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.25, y: 1.14}
   m_EdgeRadius: 0
+--- !u!114 &3827579110629406552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5949554816469732158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 007f76454a72891498eafe0aeea3a2bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  life: 0
+  dead: 0
