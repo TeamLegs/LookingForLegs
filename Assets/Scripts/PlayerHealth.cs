@@ -12,15 +12,19 @@ public class PlayerHealth : MonoBehaviour
     public int life;
     public bool dead;
     private float counter;
+    [SerializeField] private float hitCooldown;
 
     public Animator anim;
 
     public LevelManager levelM;
 
+    private float cooldown;
+
     private void Start()
     {
         life = health.Length;
         counter = 0;
+        cooldown = hitCooldown;
     }
 
     // Update is called once per frame
@@ -34,12 +38,17 @@ public class PlayerHealth : MonoBehaviour
                 anim.SetTrigger("Dead");
             }
         }
+
+        if (cooldown >= 0)
+        {
+            cooldown -= Time.deltaTime;
+        }
     }
 
     public void TakeDamage(int d)
     {
        
-        if (life >= 1)
+        if (life >= 1 && cooldown <= 0)
         {
 
             life -= d; // 1-1 = 0
@@ -48,6 +57,7 @@ public class PlayerHealth : MonoBehaviour
 
             health[life].gameObject.GetComponent<HealthBar>().damage(); //[0]
 
+            cooldown = hitCooldown;
             if (life < 1)
             {
                 dead = true;
