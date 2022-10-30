@@ -5,7 +5,7 @@ using UnityEngine;
 public class FinishTrigger : MonoBehaviour
 {
     //Decalre Variables
-    public LevelManager lM;
+    public LevelManager levelM;
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +23,7 @@ public class FinishTrigger : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            lM.animator.SetTrigger("Start");
+            levelM.anim.SetTrigger("Start");
 
         }
     }

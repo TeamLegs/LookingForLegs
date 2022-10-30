@@ -31,7 +31,7 @@ public class LoadingScreen : MonoBehaviour
             {
                 waiting = false;
 
-                FadeToLevel(2);
+                FadeToLevel(3);
             }
 
             Debug.Log(counter);
