@@ -23,7 +23,7 @@ public class FinishTrigger : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            levelM.anim.SetTrigger("Start");
+            levelM.anim.SetTrigger("Dead");
 
         }
     }
