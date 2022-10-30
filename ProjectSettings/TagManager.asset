@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - LegParent
   layers:
   - Default
   - TransparentFX
@@ -38,6 +39,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Bkg_Sky
+    uniqueID: 2848479655
+    locked: 0
+  - name: Bkg_Mountains
+    uniqueID: 390359343
+    locked: 0
+  - name: Bkg_Forest
+    uniqueID: 3085302489
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

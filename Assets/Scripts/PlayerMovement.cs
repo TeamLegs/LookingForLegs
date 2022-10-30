@@ -18,10 +18,13 @@ public class PlayerMovement : MonoBehaviour
     public float timeSinceAction = 0.0f;
     public float actionCooldown = 0.0f;
 
+    private SpriteRenderer sprite;
+
     // Awake is called when the script is being loaded
     public void Awake()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
+        sprite = GetComponent<SpriteRenderer>();
     }
 
     // Start is called before the first frame update
@@ -49,9 +52,10 @@ public class PlayerMovement : MonoBehaviour
     public void Jump()
     {
         //If the object is grounded and the player presses space, then jump.
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded == (true))
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             rb.AddForce(new Vector2(0f, jumpSpeed * jumpMultiplier), ForceMode2D.Impulse);
+            isGrounded = false;
         }
         
     }
@@ -68,10 +72,6 @@ public class PlayerMovement : MonoBehaviour
     //If the object is colliding with the ground or obstacle, then set isGrounded to false
     public void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Ground")
-        {
-            isGrounded = false;
-        }
     }
 
     public void setSpeedMultiplier(float multiplier)
