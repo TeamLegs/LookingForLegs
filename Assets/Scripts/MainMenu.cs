@@ -21,6 +21,12 @@ public class MainMenu : MonoBehaviour
         FadeToLevel(1);
     }
 
+    public void EndGame()
+    {
+        Application.Quit();
+        //Debug.Log("You Quit. That was stupid.");
+    }
+
     public void FadeToLevel(int levelIndex)
     {
         levelToLoad = levelIndex;
