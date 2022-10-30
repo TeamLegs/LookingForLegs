@@ -21,8 +21,5 @@ public class CameraFollow : MonoBehaviour
         //Sets the current position of camera to the target and offsets its position.
         var pos = target.position + offset;
         transform.position = pos;
-
-        var bakPos = backgroundImg.transform.position;
-        backgroundImg.SetPositionAndRotation(new Vector3(pos.x,bakPos.y, bakPos.z),backgroundImg.transform.rotation);
     }
 }
