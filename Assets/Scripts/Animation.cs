@@ -87,4 +87,13 @@ public class Animation : MonoBehaviour
     {
         legSprite = newRenderer;
     }
+
+    public void shouldFlip(bool bShouldFlip)
+    {
+        spriteRenderer.flipX = bShouldFlip;
+        if (legSprite != null)
+        {
+            legSprite.flipX = bShouldFlip;
+        }
+    }
 }
