@@ -30,7 +30,6 @@ public class Animation : MonoBehaviour
         pm = GetComponent<PlayerMovement>();
         spriteRenderer = GetComponent<SpriteRenderer>();
 
-
         counter = 0;
     }
 
@@ -81,6 +80,20 @@ public class Animation : MonoBehaviour
                 }
                 counter = 0;
             }
+        }
+    }
+
+    public void changeLeg(SpriteRenderer newRenderer)
+    {
+        legSprite = newRenderer;
+    }
+
+    public void shouldFlip(bool bShouldFlip)
+    {
+        spriteRenderer.flipX = bShouldFlip;
+        if (legSprite != null)
+        {
+            legSprite.flipX = bShouldFlip;
         }
     }
 }

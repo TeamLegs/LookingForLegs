@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float jumpMultiplier = 1;
     
     Rigidbody2D rb;
+    private Animation anim;
 
     public bool isGrounded = true;                         
     public float timeSinceAction = 0.0f;
@@ -22,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     public void Awake()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animation>();
     }
 
     // Start is called before the first frame update
@@ -44,12 +46,20 @@ public class PlayerMovement : MonoBehaviour
         //When a horizontal input is given then the player will move along the x axis. 
         Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0f, 0f);
         transform.position += move * Time.deltaTime * speed * speedMultiplier;
+
+        if (Input.GetAxis("Horizontal") < 0)
+        {
+            anim.shouldFlip(true);
+        }
+        else
+        {
+            anim.shouldFlip(false);
+        }
     }
 
     public void Jump()
     {
-        //If the object is grounded and the player presses space, then jump.
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        //If the object is grounded and the player presses space, then jump. if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             rb.AddForce(new Vector2(0f, jumpSpeed * jumpMultiplier), ForceMode2D.Impulse);
             isGrounded = false;
